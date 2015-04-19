@@ -1,12 +1,3 @@
-# follow_joints_utils
-
-ros utility for follow_joint_trajectory
-
-## How to use
-
-This is client for follow_joint_trajectory action. You can use it very easily from Python.
-
-```python
 #!/usr/bin/env python
 
 import rospy
@@ -19,4 +10,4 @@ if __name__ == '__main__':
     left_arm = EzJoints('/l_arm_controller')
     right_arm = EzJoints('/r_arm_controller')
     rospy.spin()
-```
+
