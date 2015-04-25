@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(follow_joints_utils)
+project(ez_utils)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -80,7 +80,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES follow_joints_utils
+#  LIBRARIES ez_utils
 #  CATKIN_DEPENDS control_msgs rospy
 #  DEPENDS system_lib
 )
@@ -97,19 +97,19 @@ include_directories(
 )
 
 ## Declare a cpp library
-# add_library(follow_joints_utils
-#   src/${PROJECT_NAME}/follow_joints_utils.cpp
+# add_library(ez_utils
+#   src/${PROJECT_NAME}/ez_utils.cpp
 # )
 
 ## Declare a cpp executable
-# add_executable(follow_joints_utils_node src/follow_joints_utils_node.cpp)
+# add_executable(ez_utils_node src/ez_utils_node.cpp)
 
 ## Add cmake target dependencies of the executable/library
 ## as an example, message headers may need to be generated before nodes
-# add_dependencies(follow_joints_utils_node follow_joints_utils_generate_messages_cpp)
+# add_dependencies(ez_utils_node ez_utils_generate_messages_cpp)
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(follow_joints_utils_node
+# target_link_libraries(ez_utils_node
 #   ${catkin_LIBRARIES}
 # )
 
@@ -128,7 +128,7 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS follow_joints_utils follow_joints_utils_node
+# install(TARGETS ez_utils ez_utils_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -153,7 +153,7 @@ include_directories(
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_follow_joints_utils.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_ez_utils.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()

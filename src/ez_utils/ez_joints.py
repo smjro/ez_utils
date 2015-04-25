@@ -1,9 +1,9 @@
 import rospy
-from follow_joints_utils.msg import TargetJoints
+from ez_utils.msg import TargetJoints
 from control_msgs.msg import FollowJointTrajectoryActionGoal
 from trajectory_msgs.msg import JointTrajectoryPoint
 
-class EzJoints(object):
+class JointsServer(object):
     def __init__(self, controller_name):
         self._joint_names = rospy.get_param(controller_name + '/joints')
         self._dof = len(self._joint_names)
@@ -32,3 +32,7 @@ class EzJoints(object):
         target_point.accelerations = [self._acceleration] * self._dof
         action_goal.goal.trajectory.points.append(target_point)
         self._pub.publish(action_goal)
+
+    def set_positions(self, positions):
+        self.position_callback(TargetJoints(positions=positions))
+
